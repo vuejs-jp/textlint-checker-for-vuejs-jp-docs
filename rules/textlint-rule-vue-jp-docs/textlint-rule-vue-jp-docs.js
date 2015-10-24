@@ -27,7 +27,7 @@ module.exports = function (context) {
 
         //言い換え辞書
         var terms = [
-            ["expression", "式(または表現)"],
+            ["expression", "式"],
             ["filter", "フィルタ"]
         ]
         
