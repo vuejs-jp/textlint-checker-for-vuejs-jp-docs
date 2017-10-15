@@ -6,8 +6,8 @@ module.exports = function (context) {
      */
     var halfSpace = function(node){
 		var text = context.getSource(node);
-        var matches_01 = /[a-zA-Z][^\x00-\x7E、。（）]/.exec(text);
-        var matches_02 = /[a-zA-Z][^\x00-\x7E、。（）]/.exec(text);
+        var matches_01 = /[a-zA-Z][^\x00-\x7E、。（）「」]/.exec(text);
+        var matches_02 = /[a-zA-Z][^\x00-\x7E、。（）「」]/.exec(text);
         if(matches_01 || matches_02){
             var report = matches_01 ? matches_01 : matches_02;
             context.report(node, new context.RuleError("半角と全角の間は一文字あける : " + " [" + report[0] + "] ... " + text ));
